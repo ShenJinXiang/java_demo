@@ -1,6 +1,6 @@
 package com.shenjinxiang.spb.mapper;
 
-import com.shenjinxiang.spb.bean.Student;
+import com.shenjinxiang.spb.domain.Student;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 

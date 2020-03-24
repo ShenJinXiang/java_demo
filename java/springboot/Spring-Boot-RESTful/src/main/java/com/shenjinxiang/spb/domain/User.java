@@ -1,18 +1,17 @@
-package com.shenjinxiang.spb.bean;
+package com.shenjinxiang.spb.domain;
 
-public class Student {
+public class User {
 
-    private int id;
+    private Long id;
     private String name;
-    private int age;
-    private int sex;
+    private Integer age;
     private String desc;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -24,20 +23,12 @@ public class Student {
         this.name = name;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
-    }
-
-    public int getSex() {
-        return sex;
-    }
-
-    public void setSex(int sex) {
-        this.sex = sex;
     }
 
     public String getDesc() {

@@ -1,6 +1,6 @@
 package com.shenjinxiang.spb.service;
 
-import com.shenjinxiang.spb.bean.Student;
+import com.shenjinxiang.spb.domain.Student;
 
 import java.util.List;
 

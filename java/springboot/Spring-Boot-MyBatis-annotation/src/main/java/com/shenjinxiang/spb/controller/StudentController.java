@@ -1,6 +1,6 @@
 package com.shenjinxiang.spb.controller;
 
-import com.shenjinxiang.spb.bean.Student;
+import com.shenjinxiang.spb.domain.Student;
 import com.shenjinxiang.spb.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
