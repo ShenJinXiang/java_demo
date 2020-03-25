@@ -23,21 +23,24 @@ public class UserController {
     }
 
     @PostMapping("/")
-    public void postUser(@RequestBody User user) {
+    public String postUser(@RequestBody User user) {
         users.put(user.getId(), user);
+        return "success";
     }
 
     @PutMapping("/{id}")
-    public void putUser(@PathVariable Long id, @RequestBody User user) {
+    public String putUser(@PathVariable Long id, @RequestBody User user) {
         User u = users.get(id);
         u.setName(user.getName());
         u.setAge(user.getAge());
         u.setDesc(user.getDesc());
         users.put(id, u);
+        return "success";
     }
 
     @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable Long id) {
+    public String deleteUser(@PathVariable Long id) {
         users.remove(id);
+        return "success";
     }
 }
