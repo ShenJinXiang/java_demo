@@ -14,7 +14,7 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    @GetMapping("/")
+    @GetMapping("")
     public List<Student> queryAll() {
         return this.studentService.queryAll();
     }
@@ -24,12 +24,12 @@ public class StudentController {
         return this.studentService.queryById(id);
     }
 
-    @PostMapping(value = "/")
+    @PostMapping("")
     public int add(@RequestBody Student student) {
         return this.studentService.add(student);
     }
 
-    @PutMapping(value = "/{id}")
+    @PutMapping("/{id}")
     public int update(@PathVariable int id, @RequestBody Student student) {
         return this.studentService.update(student);
     }
