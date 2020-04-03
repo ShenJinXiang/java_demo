@@ -13,7 +13,7 @@ import java.util.List;
  * @Date: 2020/4/3 17:49
  */
 @Service("emperorService")
-public class EmperorServiceImp implements EmperorService {
+public class EmperorServiceImpl implements EmperorService {
 
     @Autowired
     private EmperorMapper emperorMapper;

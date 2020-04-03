@@ -13,7 +13,7 @@ import java.util.List;
  * @Date: 2020/4/3 17:47
  */
 @Service("studentService")
-public class StudentServiceImp implements StudentService {
+public class StudentServiceImpl implements StudentService {
 
     @Autowired
     private StudentMapper studentMapper;
