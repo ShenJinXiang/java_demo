@@ -37,4 +37,9 @@ public class StudentServiceImpl implements StudentService {
     public int upd(Student student) {
         return this.studentMapper.upd(student);
     }
+
+    @Override
+    public int delById(int id) {
+        return this.studentMapper.delById(id);
+    }
 }

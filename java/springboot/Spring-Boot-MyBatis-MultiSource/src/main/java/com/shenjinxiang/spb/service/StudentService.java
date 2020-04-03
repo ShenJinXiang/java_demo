@@ -41,4 +41,11 @@ public interface StudentService {
      */
     int upd(Student student);
 
+    /**
+     * 删除
+     * @param id
+     * @return
+     */
+    int delById(int id);
+
 }

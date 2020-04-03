@@ -28,7 +28,7 @@ public class BookController {
         return this.bookService.queryById(id);
     }
 
-    @PostMapping("/")
+    @PostMapping("")
     public int postUser(@RequestBody Book book) {
         return this.bookService.add(book);
     }
