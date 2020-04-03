@@ -3,8 +3,12 @@ package com.shenjinxiang.spb.ds.config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+/**
+ * @Author: ShenJinXiang
+ * @Date: 2020/4/3 13:28
+ */
 @Component
-@ConfigurationProperties("spring.datasource.db1")
+@ConfigurationProperties(prefix = "spring.datasource.db1")
 public class Db1Config {
 
     private String url;

@@ -9,12 +9,15 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
 
+/**
+ * @Author: ShenJinXiang
+ * @Date: 2020/4/3 14:29
+ */
 @Configuration
 @MapperScan(basePackages = Db3DataSourceConfig.MAPPER_PACKAGE, sqlSessionFactoryRef = "db3SqlSessionFactory")
 public class Db3DataSourceConfig {
