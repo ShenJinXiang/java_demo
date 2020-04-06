@@ -43,7 +43,6 @@ public class Db3DataSourceConfig {
     public SqlSessionFactory db3SqlSessionFactory(@Qualifier("db3DataSource") DataSource dataSource) throws Exception {
         final SqlSessionFactoryBean sessionFactoryBean = new SqlSessionFactoryBean();
         sessionFactoryBean.setDataSource(dataSource);
-        // 如果不使用xml的方式配置mapper，可以
         sessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MAPPER_LOCATION));
         return sessionFactoryBean.getObject();
     }

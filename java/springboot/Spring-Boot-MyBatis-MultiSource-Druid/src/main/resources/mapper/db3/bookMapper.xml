@@ -9,7 +9,7 @@
     </resultMap>
 
     <select id="queryAllBook" resultMap="baseResult">
-        SELECT ID, 'NAME', AUTHOR
+        SELECT ID, NAME, AUTHOR
         FROM BOOK
         ORDER BY ID ASC
     </select>
@@ -23,8 +23,11 @@
     </select>
 
     <insert id="add" parameterType="com.shenjinxiang.spb.domain.Emperor">
+        <selectKey keyProperty="id" resultType="java.lang.Integer" order="BEFORE">
+            SELECT SEQ_BOOK_ID.NEXTVAL FROM DUAL
+        </selectKey>
         INSERT INTO BOOK
-        (ID, 'NAME', AUTHOR)
+        (ID, NAME, AUTHOR)
         VALUES
         (#{id}, #{name}, #{author})
     </insert>
@@ -32,8 +35,8 @@
     <update id="upd" parameterType="com.shenjinxiang.spb.domain.Emperor">
         UPDATE BOOK
         <set>
-            NAME = #{name}
-            AUTHOR = #{author}
+            NAME = #{name},
+            AUTHOR = #{author},
         </set>
         <where>
             AND ID = #{id}

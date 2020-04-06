@@ -32,8 +32,8 @@
     <update id="upd" parameterType="com.shenjinxiang.spb.domain.Emperor">
         UPDATE emperor
         <set>
-            `name` = #{name}
-            `dynasty` = #{dynasty}
+            `name` = #{name},
+            `dynasty` = #{dynasty},
         </set>
         <where>
             AND `id` = #{id}

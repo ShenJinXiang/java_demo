@@ -34,10 +34,10 @@
     <update id="upd" parameterType="com.shenjinxiang.spb.domain.Student">
         UPDATE student
         <set>
-            `name` = #{name}
-            `age` = #{age}
-            `sex` = #{sex}
-            `desc` = #{desc}
+            `name` = #{name},
+            `age` = #{age},
+            `sex` = #{sex},
+            `desc` = #{desc},
         </set>
         <where>
             AND `id` = #{id}

@@ -34,7 +34,7 @@ public class StudentController {
     }
 
     @PutMapping("/{id}")
-    public int upd(@PathVariable int id, Student student) {
+    public int upd(@PathVariable int id, @RequestBody Student student) {
         Student student1 = this.studentService.queryById(id);
         student1.setName(student.getName());
         student1.setAge(student.getAge());
