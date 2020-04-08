@@ -24,9 +24,9 @@
 
     <insert id="add" parameterType="com.shenjinxiang.spb.domain.Emperor">
         INSERT INTO emperor
-        (`id`, `name`, `dynasty`)
+        (`name`, `dynasty`)
         VALUES
-        (#{id}, #{name}, #{dynasty})
+        (#{name}, #{dynasty})
     </insert>
 
     <update id="upd" parameterType="com.shenjinxiang.spb.domain.Emperor">

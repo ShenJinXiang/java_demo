@@ -1,5 +1,6 @@
 package com.shenjinxiang.spb.aop;
 
+import com.alibaba.fastjson.JSON;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -10,8 +11,6 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
-import java.lang.reflect.Method;
 
 /**
  * @Author: ShenJinXiang
@@ -28,24 +27,22 @@ public class WebLogAspect {
 
     @Before("controllerLog()")
     public void logBeforeController(JoinPoint joinPoint) {
-        log.info("logBeforeController before...");
+//        log.info("logBeforeController before...");
     }
 
     @Around("controllerLog()")
     public Object aroundController(ProceedingJoinPoint point) {
-        log.info("aroundController before....");
+        String className = point.getTarget().getClass().getName();
+        MethodSignature signature = (MethodSignature) point.getSignature();
+        Object[] args = point.getArgs();
+        log.info("请求方法：" + className + "." + signature.getName());
+        log.info("请求参数：" + JSON.toJSONString(args));
         Object result = null;
         try {
             result = point.proceed();
         } catch (Throwable e) {
         }
-        String className = point.getTarget().getClass().getName();
-        log.info(className);
-        MethodSignature signature = (MethodSignature) point.getSignature();
-        Method method = signature.getMethod();
-        log.info(method.getName());
-        log.info(signature.getName());
-        log.info("aroundController after....");
+        log.info("返回结果：" + JSON.toJSONString(result));
         return result;
     }
 }
