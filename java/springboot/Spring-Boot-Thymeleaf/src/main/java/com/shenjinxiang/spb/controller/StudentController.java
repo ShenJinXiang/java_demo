@@ -23,7 +23,7 @@ public class StudentController {
         studentList.add(new Student("李四", 16, 0, "一个老好人"));
         studentList.add(new Student("王五", 17, 1, "一个坏人"));
         studentList.add(new Student("朱六", 18, 0, "一个大坏人"));
-        studentList.add(new Student("田七", 19, 1, "一个人！！"));
+        studentList.add(new Student("田七", 20, 1, "一个人！！"));
         model.addAttribute("students", studentList);
         return "student";
     }
