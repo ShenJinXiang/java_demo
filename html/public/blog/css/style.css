@@ -1,9 +1,91 @@
+html {
+    font-size: 14px;
+}
 body {
-    margin: 0px;
-    padding: 0px;
-    background-image: url('../images/001.jpg');
+    margin: 0;
+    padding: 0;
+}
+.back-div{
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
     background-color: transparent;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+.main-container {
+    z-index: 10;
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.main-container .region-center {
+    display: block;
+    margin: 10% auto;
+    text-align: center;
+    color: #fff;
+}
+.main-container .region-center div{
+    cursor: default;
+    user-select: none;
+}
+.main-container .region-center .region-time{
+    font-size: 1050%;
+    font-weight: 500;
+}
+.main-container .region-center .region-txt{
+    font-size: 400%;
+    font-weight: 200;
+}
+
+
+
+.ba-footer {
+    z-index: 999999999;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    height: 3rem;
+    width: 100%;
+    background: #111;
+}
+.ba-footer .ba-content {
+    margin: 0 auto;
+    height: 3rem;
+    display: inline-block;
+}
+.ba-footer span {
+    color: #eee;
+    font-size: 0.857rem;
+    display: inline-block;
+    padding: 0.714rem 0.357rem;
+    float: left;
+}
+.ba-footer a {
+    float: left;
+    font-size: 0.857rem;
+    display: inline-block;
+    color: rgb(54, 65, 73);
+    text-decoration: none;
+    padding: 0.714rem 1rem;
+    cursor: pointer;
+    color:#eee;
+    height: 1.429rem;
+    line-height: 1.429;
+}
+.ba-footer a img {
+    float: left;
+    margin: 0 0 0 0.357rem;
+}
+.ba-footer a p {
+    float: left;
+    margin: 0 0 0 0.357rem;
 }
