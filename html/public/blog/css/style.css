@@ -36,13 +36,14 @@ body {
 .main-container .region-center div{
     cursor: default;
     user-select: none;
+    font-family: arial;
 }
 .main-container .region-center .region-time{
     font-size: 1050%;
     font-weight: 500;
 }
 .main-container .region-center .region-txt{
-    font-size: 400%;
+    font-size: 500%;
     font-weight: 200;
 }
 
@@ -63,7 +64,7 @@ body {
     display: inline-block;
 }
 .ba-footer span {
-    color: #eee;
+    color: #ccc;
     font-size: 0.857rem;
     display: inline-block;
     padding: 0.714rem 0.357rem;
@@ -73,13 +74,15 @@ body {
     float: left;
     font-size: 0.857rem;
     display: inline-block;
-    color: rgb(54, 65, 73);
     text-decoration: none;
     padding: 0.714rem 1rem;
     cursor: pointer;
-    color:#eee;
+    color:#ddd;
     height: 1.429rem;
     line-height: 1.429;
+}
+.ba-footer a:hover {
+    color: #fff;
 }
 .ba-footer a img {
     float: left;
