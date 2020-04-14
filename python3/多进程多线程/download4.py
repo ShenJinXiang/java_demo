@@ -4,6 +4,7 @@ from threading import Thread
 from random import randint
 from time import time, sleep
 
+
 class DownloadTask(Thread):
 
     def __init__(self, file_name):

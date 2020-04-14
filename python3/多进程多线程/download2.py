@@ -5,11 +5,13 @@ from os import getpid
 from random import randint
 from time import time, sleep
 
+
 def download_task(file_name):
     print('开始下载%s，进程号：%d' % (file_name, getpid()))
     download_time = randint(5, 10)
     sleep(download_time)
     print('%s下载完成，消耗%d秒。' % (file_name, download_time))
+
 
 if __name__ == '__main__' :
     start = time()

@@ -4,11 +4,13 @@ from random import randint
 from threading import Thread
 from time import time, sleep
 
+
 def download_task(file_name):
     print('开始下载%s' % file_name)
     download_time = randint(5, 10)
     sleep(download_time)
     print('%s下载完成，消耗%d秒。' % (file_name, download_time))
+
 
 if __name__ == '__main__' :
     start = time()

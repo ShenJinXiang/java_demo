@@ -7,6 +7,7 @@ from time import time, sleep
 
 count = 0
 
+
 def incr(name):
     global count
     print('%s 开始，进程号: %d' % (name, getpid()))
@@ -15,6 +16,7 @@ def incr(name):
         print(name + ': ' + str(count))
         sleep(1)
     print('%s 结束，进程号: %d count: %d ' % (name, getpid(), count))
+
 
 if __name__ == '__main__':
     start = time()
