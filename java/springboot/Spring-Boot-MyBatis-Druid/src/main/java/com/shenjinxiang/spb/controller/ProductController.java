@@ -14,6 +14,12 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+    @PostMapping("/create")
+    public String createTable() {
+        this.productService.createTable();
+        return "OK";
+    }
+
     @GetMapping("")
     public List<Product> queryAll() {
         return this.productService.queryAll();

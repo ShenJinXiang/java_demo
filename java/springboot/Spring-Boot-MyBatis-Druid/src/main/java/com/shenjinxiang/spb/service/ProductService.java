@@ -15,4 +15,6 @@ public interface ProductService {
     int update(Product product);
 
     int delById(int id);
+
+    void createTable();
 }

@@ -8,6 +8,15 @@
         <result property="price" column="price" jdbcType="DOUBLE" />
     </resultMap>
 
+    <update id="createTable">
+        CREATE TABLE `product` (
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+          `name` varchar(100) DEFAULT NULL,
+          `price` double(8,2) DEFAULT NULL,
+          PRIMARY KEY (`id`)
+        ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8
+    </update>
+
     <select id="queryAll" resultMap="baseResult">
         select `id`, `name`, `price`
         from product

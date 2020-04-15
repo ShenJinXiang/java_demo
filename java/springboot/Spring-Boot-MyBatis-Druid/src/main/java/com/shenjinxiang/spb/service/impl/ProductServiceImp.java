@@ -38,4 +38,9 @@ public class ProductServiceImp implements ProductService {
     public int delById(int id) {
         return this.productMapper.delById(id);
     }
+
+    @Override
+    public void createTable() {
+        this.productMapper.createTable();
+    }
 }
