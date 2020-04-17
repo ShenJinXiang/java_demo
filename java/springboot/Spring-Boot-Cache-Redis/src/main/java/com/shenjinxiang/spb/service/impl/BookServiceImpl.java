@@ -34,8 +34,9 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public int upd(Book book) {
-        return bookMapper.upd(book);
+    public Book upd(Book book) {
+        bookMapper.upd(book);
+        return bookMapper.queryById(book.getId());
     }
 
     @Override

@@ -1,6 +1,10 @@
 package com.shenjinxiang.spb.service;
 
 import com.shenjinxiang.spb.domain.Book;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 
 import java.util.List;
 
@@ -8,6 +12,7 @@ import java.util.List;
  * @Author: ShenJinXiang
  * @Date: 2020/4/16 17:29
  */
+@CacheConfig(cacheNames = "book")
 public interface BookService {
 
     /**
@@ -23,6 +28,7 @@ public interface BookService {
      * @param id
      * @return
      */
+    @Cacheable(key = "#p0")
     Book queryById(int id);
 
     /**
@@ -39,7 +45,8 @@ public interface BookService {
      * @param book
      * @return
      */
-    int upd(Book book);
+    @CachePut(key = "#p0.id")
+    Book upd(Book book);
 
     /**
      * 根据id删除
@@ -47,6 +54,7 @@ public interface BookService {
      * @param id
      * @return
      */
+    @CacheEvict(key = "#p0", allEntries = true)
     int delById(int id);
 
 }

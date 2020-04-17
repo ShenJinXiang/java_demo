@@ -34,7 +34,7 @@ public class BookController {
     }
 
     @PutMapping("/{id}")
-    public int upd(@PathVariable int id, @RequestBody Book book) {
+    public Book upd(@PathVariable int id, @RequestBody Book book) {
         Book dbBook = bookService.queryById(id);
         dbBook.setName(book.getName());
         dbBook.setAuthor(book.getAuthor());
