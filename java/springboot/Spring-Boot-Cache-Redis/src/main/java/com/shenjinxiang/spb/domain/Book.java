@@ -1,10 +1,12 @@
 package com.shenjinxiang.spb.domain;
 
+import java.io.Serializable;
+
 /**
  * @Author: ShenJinXiang
  * @Date: 2020/4/16 17:22
  */
-public class Book {
+public class Book implements Serializable {
 
     private int id;
     private String name;

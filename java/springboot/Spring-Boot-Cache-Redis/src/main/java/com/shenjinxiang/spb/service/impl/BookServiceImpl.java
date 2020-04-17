@@ -4,6 +4,7 @@ import com.shenjinxiang.spb.domain.Book;
 import com.shenjinxiang.spb.mapper.BookMapper;
 import com.shenjinxiang.spb.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +19,9 @@ public class BookServiceImpl implements BookService {
     @Autowired
     private BookMapper bookMapper;
 
+    @Autowired
+    private RedisTemplate<String, Object> redisTemplate;
+
     @Override
     public List<Book> queryAll() {
         return bookMapper.queryAll();
@@ -29,8 +33,9 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public int add(Book book) {
-        return bookMapper.add(book);
+    public Book add(Book book) {
+        bookMapper.add(book);
+        return book;
     }
 
     @Override

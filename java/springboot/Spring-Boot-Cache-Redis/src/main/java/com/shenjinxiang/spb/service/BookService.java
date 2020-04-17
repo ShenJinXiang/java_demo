@@ -37,7 +37,7 @@ public interface BookService {
      * @param book
      * @return
      */
-    int add(Book book);
+    Book add(Book book);
 
     /**
      * 修改
