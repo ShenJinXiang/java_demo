@@ -12,7 +12,7 @@ import java.util.List;
  * @Author: ShenJinXiang
  * @Date: 2020/4/16 17:29
  */
-@CacheConfig(cacheNames = "book", cacheManager="cacheManager")
+@CacheConfig(cacheNames = "book")
 public interface BookService {
 
     /**
