@@ -12,7 +12,7 @@ import java.util.List;
  * @Author: ShenJinXiang
  * @Date: 2020/4/16 17:29
  */
-@CacheConfig(cacheNames = "book")
+@CacheConfig(cacheNames = "book", cacheManager="cacheManager")
 public interface BookService {
 
     /**
@@ -28,7 +28,8 @@ public interface BookService {
      * @param id
      * @return
      */
-    @Cacheable(key = "#p0")
+//    @Cacheable(key = "#p0")
+    @Cacheable(keyGenerator = "keyGenerator")
     Book queryById(int id);
 
     /**
