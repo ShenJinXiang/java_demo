@@ -34,13 +34,13 @@ public class ObjectMapperTest {
 
 
     @Test
-    public void test1() throws Exception {
+    public void writeUserTest() throws Exception {
         String json = objectMapper.writeValueAsString(user);
         System.out.println(json);
     }
 
     @Test
-    public void test2() throws Exception {
+    public void readTreeTest() throws Exception {
         JsonNode jsonNode = objectMapper.readTree(jsonStr);
         System.out.println("name: " + jsonNode.get("name").asText());
         System.out.println("age: " + jsonNode.get("age").asInt());
@@ -49,7 +49,7 @@ public class ObjectMapperTest {
     }
 
     @Test
-    public void test3() throws Exception {
+    public void readValueTest() throws Exception {
         User user = objectMapper.readValue(jsonStr, User.class);
         System.out.println(user.toString());
     }

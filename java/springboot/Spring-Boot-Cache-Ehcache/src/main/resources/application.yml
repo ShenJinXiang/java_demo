@@ -60,6 +60,10 @@ spring:
       filter:
         stat:
           log-slow-sql: true
+  cache:
+    ehcache:
+      config: 'classpath:ehcache.xml'
+
 mybatis:
   mapper-locations: classpath:mapping/*Mapper.xml
 
