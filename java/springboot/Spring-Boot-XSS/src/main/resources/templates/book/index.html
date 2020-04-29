@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>account</title>
+    <title>BOOKS</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.4.1-1/css/bootstrap.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.css}" type="text/css">
     <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css">
 </head>
 <body>
 <div class="operate-container">
-    <button class="btn btn-outline-primary btn-sm" type="button" id="addBtn">新增</button>
+    <button class="btn btn-primary " type="button" id="addBtn">新增</button>
 </div>
 
 <div class="data-container">
-    <table id="tableGrid" class="table table-striped table-bordered table-hover table-sm">
+    <table id="tableGrid" class="table table-striped table-bordered table-hover ">
         <thead>
         <tr>
             <th>序号</th>
@@ -44,7 +44,7 @@
     </table>
 </div>
 <script type="text/javascript" th:src="@{/webjars/jquery/3.5.0/jquery.min.js}" ></script>
-<script type="text/javascript" th:src="@{/webjars/bootstrap/4.4.1-1/js/bootstrap.min.js}" ></script>
+<script type="text/javascript" th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}" ></script>
 <script type="text/javascript" th:src="@{/js/book/index.js}" ></script>
 </body>
 </html>
