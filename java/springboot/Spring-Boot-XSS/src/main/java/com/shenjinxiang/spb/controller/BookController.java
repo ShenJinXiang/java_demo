@@ -44,7 +44,6 @@ public class BookController {
     @PostMapping("/add")
     public ModelAndView addBook(Book book) {
         ModelAndView mv = new ModelAndView();
-        System.out.println(book);
 
         mv.setViewName("redirect:/books");
         return mv;
