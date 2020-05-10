@@ -23,23 +23,18 @@
             <th>说明</th>
         </tr>
         </thead>
-        <tbody>
-        <tr>
-            <td>1</td>
-            <td>楚亡</td>
-            <td>李开元</td>
-            <td>历史</td>
-            <td>2010</td>
-            <td>秦末，楚汉争霸</td>
+        <tbody id="dataList">
+        <!--<tr th:if="${bookList.size() <= 0}">
+            <td colspan="6">暂无数据</td>
         </tr>
-        <tr>
-            <td>2</td>
-            <td>国史大纲</td>
-            <td>钱穆</td>
-            <td>历史</td>
-            <td>1940</td>
-            <td>影响最大的中国现代通史类书籍之一</td>
-        </tr>
+        <tr th:each="book, stat : ${bookList} ">
+            <td th:text="${stat.count}"></td>
+            <td th:text="${book.name}"></td>
+            <td th:text="${book.author}"></td>
+            <td th:text="${book.type}"></td>
+            <td th:text="${book.publicationDate}"></td>
+            <td th:text="${book.description}"></td>
+        </tr>-->
         </tbody>
     </table>
 </div>

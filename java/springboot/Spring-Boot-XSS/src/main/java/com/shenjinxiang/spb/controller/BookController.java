@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -25,9 +26,16 @@ public class BookController {
 
     @GetMapping("")
     public String index(Model model) {
-        List<Book> books = this.bookService.queryAll();
-        model.addAttribute("bookList", books);
+//        List<Book> books = this.bookService.queryAll();
+//        model.addAttribute("bookList", books);
         return "book/index";
+    }
+
+    @ResponseBody
+    @GetMapping("/all")
+    public List<Book> all() {
+        List<Book> books = this.bookService.queryAll();
+        return books;
     }
 
     @GetMapping("/addPage")
@@ -35,16 +43,10 @@ public class BookController {
         return "book/add.html";
     }
 
-//    @PostMapping("")
-//    public int addBook(Book book) {
-//        System.out.println(book);
-//        return 1;
-//    }
-
     @PostMapping("/add")
     public ModelAndView addBook(Book book) {
         ModelAndView mv = new ModelAndView();
-
+        bookService.add(book);
         mv.setViewName("redirect:/books");
         return mv;
     }
