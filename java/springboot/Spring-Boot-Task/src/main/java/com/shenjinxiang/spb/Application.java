@@ -3,12 +3,14 @@ package com.shenjinxiang.spb;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * @Author: ShenJinXiang
  * @Date: 2020/6/22 06:22
  */
 @SpringBootApplication
+@EnableScheduling
 public class Application {
 
     public static void main(String[] args) {
